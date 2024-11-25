@@ -4,29 +4,37 @@
     box-sizing: border-box;
    }
     
+   
    body {
-    background-image: url(teater2.png);
+    background-image: url(teater3.png);
     background-size: cover;
     background-position: center;
-    background-color: #191931;
+    background-color: black;
     background-repeat: no-repeat;
-    display: flex;
-    color: white;
-    display: flex;
+    color: white; 
     flex-direction: column;
     align-items: center;
     font-family: 'outfit', Arial Bold;
-    padding-bottom: 2rem;
     gap: 1rem;
+    display: flex;
    }
    
    .logooase{
-     width: 9rem;
+     width: 11rem;
      border-radius: 10%;
-     aspect-ratio: 1/1;
      object-fit: cover;
      object-position: top;
+     padding-top: 4rem;
+     padding-bottom: 2rem;
     
+     }
+
+     .judul {
+
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      padding-bottom: 0;
+
      }
     
      ul {
@@ -50,11 +58,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: rgb(131, 126, 126);
+        background-color: rgba(253, 8, 8, 0.822);
         gap: 1rem;
         padding: 1rem;
         border-radius: 20px;
-        box-shadow: 8px 10px 0 #0f0f25;
+        box-shadow: 8px 10px 0 black;
         border: 2px solid white;
       }
       
@@ -78,6 +86,8 @@
       
       .links .link-text {
         text-align: center;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
       }
       
       .link-action {
@@ -95,5 +105,20 @@
         color: #8787a3;
         font-size: 0.75rem;
       }
+      
+      @media screen and (max-width: 480px) {
+        body {
+          background-image: url(teater3.png);
+          background-position: top;
+          background-size: cover;
+
+        .link-card {
+          background-color: rgba(255, 1, 1, 0.767);
+        }
+    
+        }
+      }
+
+       
     
    
