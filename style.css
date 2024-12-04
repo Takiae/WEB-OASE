@@ -1,125 +1,174 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-   }
-    
-   
-   body {
-    background-image: url(teater3.png);
-    background-size: cover;
-    background-position: center;
-    background-color: black;
-    background-repeat: no-repeat;
-    color: white; 
-    flex-direction: column;
-    align-items: center;
-    font-family: 'outfit', Arial Bold;
-    gap: 1rem;
-    display: flex;
-   }
-   
-   .logooase{
-     width: 20rem;
-     object-fit: cover;
-     object-position: top;
-     padding-top: 5rem;
-     padding-bottom: 1rem;
-    
-     }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-     .judul {
+body {
+  background-image: url(teater3.png);
+  background-size: cover;
+  background-position: center;
+  background-color: black;
+  background-repeat: no-repeat;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Outfit', Arial, sans-serif;
+  gap: 1rem;
+  display: flex;
+  overflow-x: hidden; /* Hilangkan scroll horizontal */
+}
 
-      font-size: 50px;
-      font-family: Arial, Helvetica, sans-serif;
-      padding-bottom: 0;
+.logooase {
+  width: 20rem;
+  object-fit: cover;
+  object-position: top;
+  padding-top: 5rem;
+  padding-bottom: 1rem;
+}
 
+.judul {
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 0;
+  text-align: center; /* Rata tengah teks judul */
+}
 
-     }
-      .subjudul {
-        padding-bottom: 2rem;
-      }    
-     ul {
-        width: 80%;
-        max-width: 70rem;
-      }
-      
-      ul li {
-        list-style: none;
-      }
-      
-      ul.links li:not(:last-child) {
-        margin-bottom: 2rem;
-      }
-      
-      .links {
-        margin-top: 2rem;
-      }
-      
-      .link-card {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: rgba(253, 8, 8, 0.664);
-        gap: 1rem;
-        padding: 1rem;
-        border-radius: 30px;
-        box-shadow: 8px 10px 0 black;
-        border: 2px solid white;
-      }
-      
-      .link-card:hover {
-        border: 2px solid white;
-      }
-      
-      .links .link-icon {
-        background-image: linear-gradient(to top, red, black);
-        padding: 0.5rem;
-        border-radius: 10px;
-        aspect-ratio: 1/1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      
-      .links .link-icon i {
-        color: white;
-      }
-      
-      .links .link-text {
-        text-align: center;
-        color: white;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      
-      .link-action {
-        color: #8787a3;
-        cursor: pointer;
-        padding: 10px;
-      }
-      
-      .copyright {
-        margin-top: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-        color: #8787a3;
-        font-size: 0.75rem;
-      }
-      
-      @media (max-width: 480px) {
-        
-        body {
-          background-image: url(teater3.png);
-          background-position: top;
-          background-size: cover;
-        }
+.subjudul {
+  padding-bottom: 2rem;
+  font-size: 1.2rem;
+  text-align: center; /* Tambahkan rata tengah */
+}
 
-      }
+ul {
+  width: 80%;
+  max-width: 70rem;
+}
 
+ul li {
+  list-style: none;
+}
 
+ul.links li:not(:last-child) {
+  margin-bottom: 2rem;
+}
 
-       
-    
-   
+.links {
+  margin-top: 2rem;
+}
+
+.link-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(253, 8, 8, 0.664);
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 30px;
+  box-shadow: 8px 10px 0 black;
+  border: 2px solid white;
+  transition: transform 0.3s ease, border 0.3s ease; /* Tambahkan transisi */
+}
+
+.link-card:hover {
+  transform: scale(1.05); /* Perbesar saat hover */
+  border: 3px solid white;
+}
+
+.links .link-icon {
+  background-image: linear-gradient(to top, red, black);
+  padding: 0.5rem;
+  border-radius: 10px;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links .link-icon i {
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.links .link-icon i:hover {
+  color: red;
+  transform: scale(1.2);
+}
+
+.links .link-text {
+  text-align: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.link-action {
+  color: #8787a3;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.copyright {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: #8787a3;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  /* Untuk layar tablet */
+  .logooase {
+      width: 15rem; /* Perkecil logo */
+  }
+
+  .judul {
+      font-size: 2.5rem; /* Sesuaikan ukuran teks */
+  }
+
+  .subjudul {
+      font-size: 1rem;
+  }
+
+  ul {
+      width: 90%; /* Perkecil lebar */
+  }
+
+  .link-card {
+      padding: 0.8rem; /* Kurangi padding */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Untuk layar HP */
+  .logooase {
+      width: 12rem; /* Perkecil logo lebih jauh */
+  }
+
+  .judul {
+      font-size: 2rem; /* Ukuran lebih kecil untuk HP */
+  }
+
+  .subjudul {
+      font-size: 0.9rem;
+  }
+
+  .link-card {
+      flex-direction: column; /* Ubah menjadi vertikal */
+      text-align: center; /* Rata tengah */
+      padding: 1rem;
+  }
+
+  .link-icon {
+      margin-bottom: 0.5rem; /* Beri jarak pada ikon */
+  }
+
+  ul {
+      width: 95%; /* Lebar ul menyesuaikan layar */
+  }
+
+  .links .link-icon i {
+      font-size: 1.5rem; /* Perbesar ikon agar lebih jelas */
+  }
+}
